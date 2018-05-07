@@ -1,0 +1,57 @@
+{
+
+  "ML": [{
+      "ML1": [{
+          "name": "HD1",
+          "left": "350px",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt" : "1"
+        },
+        {
+          "name": "HD2",
+          "left": "$takt",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt" : "2"
+        },
+        {
+          "name": "HD3",
+          "left": "30px",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt" : "4"
+        }
+      ]
+    },
+
+    {
+      "ML2": [{
+          "name": "HD33",
+          "takt": "1",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "idshgdhgsyugdusgyu",
+          "takt": "2",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD53",
+          "takt": "3",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        }
+      ]
+    }
+  ]
+
+}

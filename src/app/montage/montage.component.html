@@ -1,0 +1,75 @@
+<p>
+  montage works!
+</p>
+<button (click)="getHDT()">montaz</button>
+
+<div *ngFor="let item of hdt">
+
+<ul *ngFor="let a of item.ML1 ">
+    <li>{{a.name}}</li>
+  </ul>
+</div>
+
+
+<div>
+
+  <div class="ramka">
+    <!-- Linia ML1 -->
+    <div class="ML1">
+      <div *ngFor="let a of ML1 ; let i = index ">
+            <div class="hd1"  [ngStyle]="getCss(a.takt)"  >{{a.name}} </div>
+        </div>
+
+
+    </div>
+      <!-- Linia ML2-->
+    <div class="ML2">
+      <div *ngFor="let a of ML2; let i = index  "  >
+        <div class="hd1"  [ngStyle]="getCss(a.takt)"  >{{a.name}} </div>
+    </div>
+    </div>
+    <!-- Linia ML3-->
+    <div class="ML3">
+      <div class="hd1"></div>
+    </div>
+    <!-- Linia ML4-->
+    <div class="ML4">
+      <div class="hd1"></div>
+    </div>
+    <!-- Linia ML5-->
+    <div class="ML5">
+      <div class="hd1"></div>
+    </div>
+
+
+
+  </div>
+
+  <img class='test1' [src]="imageMontage" alt="">
+
+
+</div>
+
+<ul>
+  <li>
+    tststst
+  </li>
+</ul>
+
+<header>
+  <ul>
+    <li>
+      testdd
+    </li>
+    <li>
+      tessstdd
+    </li>
+  </ul>
+</header>
+
+
+<ul>
+  <li>
+    tststst
+  </li>
+</ul>
