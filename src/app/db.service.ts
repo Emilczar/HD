@@ -7,6 +7,7 @@ import {
 } from './data.service';
 
 
+// serwis nie uzywany
 
 @Injectable()
 export class DbService {

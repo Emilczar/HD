@@ -23,7 +23,7 @@ $takt: 200px;
 
 }
 
-.test1{
+.montage1{
 /* Full height */
 height: 100%;
 
@@ -69,6 +69,7 @@ background-size: cover;
   height: 30px;
   top: 370px;
   left: 70px;
+
 }
 
 .ML4 {
@@ -78,6 +79,7 @@ background-size: cover;
   height: 30px;
   top: 435px;
   left: 70px;
+
 }
 
 .ML5 {
@@ -87,10 +89,22 @@ background-size: cover;
   height: 30px;
   top: 490px;
   left: 70px;
+
 }
 
-
+.pole {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color:rgba($color: rgb(201, 204, 28), $alpha: 0.9);
+  z-index: 10;
+  top: -10px;
+}
 header > ul {
 color: purple;
 background : red;
+
 }
+
+
+

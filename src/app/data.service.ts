@@ -24,16 +24,20 @@ export class DataService {
   public montaz;
   public montaz_ml1;
   public montaz_ml2;
-  public test = new Subject < any > ();
+  public ml1$ = new Subject < any > ();
+  public ml2$ = new Subject < any > ();
+  public ml3$ = new Subject < any > ();
+  public ml4$ = new Subject < any > ();
+  public ml5$ = new Subject < any > ();
+
   constructor(public http: HttpClient) {
     this.getDane().subscribe((data) => {
       this.montaz = data['ML'];
-      this.montaz_ml1 = this.makeObjektToArry(this.montaz[0]);
-      // this.montaz_ml2 = this.makeObjektToArry(this.montaz[1]);
-      this.test.next(this.makeObjektToArry(this.montaz[1]));
-      console.log('service this.montaz_ml1: ', this.montaz_ml1);
-      console.log('service this.montaz_ml2: ', this.montaz_ml2);
-
+      this.ml1$.next(this.makeObjektToArry(this.montaz[0]));
+      this.ml2$.next(this.makeObjektToArry(this.montaz[1]));
+      this.ml3$.next(this.makeObjektToArry(this.montaz[2]));
+      this.ml4$.next(this.makeObjektToArry(this.montaz[3]));
+      this.ml5$.next(this.makeObjektToArry(this.montaz[4]));
     });
   }
 
@@ -48,12 +52,23 @@ export class DataService {
         element = obj[key];
       }
     }
-    // console.log('makeObjektToArry: ', element );
     return element;
   }
 
-  getMontage(): Observable < any > {
-    return this.test.asObservable();
+  getMl1(): Observable < any > {
+    return this.ml1$.asObservable();
+  }
+  getMl2(): Observable < any > {
+    return this.ml2$.asObservable();
+  }
+  getMl3(): Observable < any > {
+    return this.ml3$.asObservable();
+  }
+  getMl4(): Observable < any > {
+    return this.ml4$.asObservable();
+  }
+  getMl5(): Observable < any > {
+    return this.ml5$.asObservable();
   }
 
 }

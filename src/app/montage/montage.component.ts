@@ -10,6 +10,11 @@ import {
   DomSanitizer
 } from '@angular/platform-browser';
 
+
+declare const $: any;
+
+
+
 @Component({
   selector: 'app-montage',
   templateUrl: './montage.component.html',
@@ -17,59 +22,75 @@ import {
 
 })
 export class MontageComponent implements OnInit {
-  public hdt;
-  public dane;
   public ML1;
   public ML2;
+  public ML3;
+  public ML4;
+  public ML5;
   db2: DataService;
-
-  sanitizer: DomSanitizer;
-  test = 'green';
 
   imageMontage = 'assets/m2.jpg';
 
-  constructor(public db: DataService) {
 
-
-   /*  // pobranie danych z pliku json z Obiekty "ML"
-    this.db.getDane().subscribe(data => {
-      this.hdt = data['ML'];
-      console.log('data1: ', this.hdt);
-      const ml1: Array < Object > = this.hdt[0]; // przypisanie do zmienne ML1 dane z tablicy hdt[0]
-      // przepisanie danych z Obiektu do tablicy
-      for (const key in ml1) {
-        if (ml1.hasOwnProperty(key)) {
-          this.ML1 = ml1[key];
-        }
-      }
-    });
- */
-  }
+  constructor(public db: DataService) {}
 
 
   ngOnInit() {
-     this.ML2 = this.getMontage();
-    }
-  getHDT() {
+    this.ML1 = this.getMl1();
+    this.ML2 = this.getMl2();
+    this.ML3 = this.getMl3();
+    this.ML4 = this.getMl4();
+    this.ML5 = this.getMl5();
 
-    // this.ML2 = this.db.getMontage();
-
+    $(function () {
+      $('[class="hd1"]').tooltip();
+    });
 
   }
-
-  getTest() {
-    console.log('  this.db.montaz_ml1; ', this.db.montaz_ml1);
-    return this.db.montaz_ml1;
+  tooltip_title(name, takt, status) {
+    return `nazwa: ${name}<br>takt: ${takt}<br>status: ${status}`;
   }
 
-  getMontage() {
-   this.db.getMontage().subscribe((data) => {
-     console.log('data ', data);
-    this.ML2 = data;
-    console.log('this.ML2 ', this.ML2);
-   });
+  getTooltip() {
+    $('[class="hd1"]').tooltip();
   }
 
+  // loading the equipment
+  getMl1() {
+    this.db.getMl1().subscribe((data) => {
+      this.ML1 = data;
+      console.log('this.ML1 ', this.ML1);
+    });
+  }
+
+  getMl2() {
+    this.db.getMl2().subscribe((data) => {
+      this.ML2 = data;
+      console.log('this.ML2 ', this.ML2);
+    });
+  }
+  getMl3() {
+    this.db.getMl3().subscribe((data) => {
+      this.ML3 = data;
+      console.log('this.ML3 ', this.ML3);
+    });
+  }
+  getMl4() {
+    this.db.getMl4().subscribe((data) => {
+      this.ML4 = data;
+      console.log('this.ML4 ', this.ML4);
+    });
+  }
+  getMl5() {
+    this.db.getMl5().subscribe((data) => {
+      this.ML5 = data;
+      console.log('this.ML5 ', this.ML5);
+    });
+  }
+
+
+
+  // position setting for hd
   getCss(key) {
     switch (key) {
       case '1':
