@@ -7,29 +7,22 @@ import {
 } from './data.service';
 
 
+
 // serwis nie uzywany
+
 
 @Injectable()
 export class DbService {
+  private baza =  new Array();
+  constructor() {
 
-  public hdtDB;
-
-  constructor(public db: DataService) {
-
-    this.db.getDane().subscribe(data => {
-      this.hdtDB =  data;
-    });
   }
 
-
-  public getMontage() {
-return this.hdtDB.montaz;
-  }
-  getPaintShop() {
-    return this.hdtDB.lakiernia;
+  saveDB(db) {
+    this.baza.push(...db);
   }
 
-  getWelding() {
-    return this.hdtDB.spawalnia;
+  getDB() {
+    return this.baza;
   }
 }

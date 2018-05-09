@@ -2,50 +2,47 @@
 
   "ML": [{
       "ML1": [{
-          "name": "HD1",
-          "left": "350px",
+          "name": "HD11",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": [],
-          "takt" : "1"
+          "takt": "1"
         },
         {
-          "name": "HD2",
-          "left": "$takt",
+          "name": "HD15",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": [],
-          "takt" : "2"
+          "takt": "2"
         },
         {
-          "name": "HD3",
-          "left": "30px",
+          "name": "HD13",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": [],
-          "takt" : "4"
+          "takt" : "3"
         }
       ]
     },
 
     {
       "ML2": [{
-          "name": "HD33",
-          "takt": "1",
+          "name": "HD21",
+          "takt": "4",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "idshgdusgyu",
-          "takt": "2",
+          "name": "HD22",
+          "takt": "5",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "HD53",
-          "takt": "3",
+          "name": "HD23",
+          "takt": "6",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
@@ -54,22 +51,22 @@
     },
     {
       "ML3": [{
+          "name": "HD31",
+          "takt": "7",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD32",
+          "takt": "8",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
           "name": "HD33",
-          "takt": "1",
-          "status": "status1",
-          "opis": "opis hdt montaz",
-          "czynosci": []
-        },
-        {
-          "name": "idsdsdds",
-          "takt": "2",
-          "status": "status1",
-          "opis": "opis hdt montaz",
-          "czynosci": []
-        },
-        {
-          "name": "HD53",
-          "takt": "3",
+          "takt": "",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
@@ -78,22 +75,22 @@
     },
     {
       "ML4": [{
-          "name": ", status",
-          "takt": "1",
+          "name": "HD41",
+          "takt": "",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "idugdusgyu",
-          "takt": "2",
+          "name": "HD42",
+          "takt": "",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "HD53",
-          "takt": "3",
+          "name": "HD43",
+          "takt": "",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
@@ -102,21 +99,21 @@
     },
     {
       "ML5": [{
-          "name": "HD33",
+          "name": "HD51",
           "takt": "1",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "idshgdusgyu",
+          "name": "HD52",
           "takt": "2",
           "status": "status1",
           "opis": "opis hdt montaz",
           "czynosci": []
         },
         {
-          "name": "HD53",
+          "name": "HD54",
           "takt": "3",
           "status": "status1",
           "opis": "opis hdt montaz",
@@ -124,6 +121,115 @@
         }
       ]
     }
-  ]
+  ],
 
+
+
+ "M": [
+      {
+          "name": "HD11",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt": "1"
+        },
+        {
+          "name": "HD15",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt": "2"
+        },
+        {
+          "name": "HD13",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": [],
+          "takt" : "3"
+        },
+        {
+          "name": "HD21",
+          "takt": "4",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD22",
+          "takt": "5",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD23",
+          "takt": "6",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD31",
+          "takt": "7",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD32",
+          "takt": "8",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD33",
+          "takt": "",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD41",
+          "takt": "",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD42",
+          "takt": "",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD43",
+          "takt": "",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD51",
+          "takt": "1",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD52",
+          "takt": "2",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        },
+        {
+          "name": "HD54",
+          "takt": "3",
+          "status": "status1",
+          "opis": "opis hdt montaz",
+          "czynosci": []
+        }
+  ]
 }

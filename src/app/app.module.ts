@@ -7,11 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-
+import { DbService } from './db.service';
 import { DataService } from './data.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { MontageComponent } from './montage/montage.component';
 import { HdtComponent } from './hdt/hdt.component';
+import { MontageIdComponent } from './montage/montage-id/montage-id.component';
+
+
 
 
 
@@ -21,14 +24,15 @@ import { HdtComponent } from './hdt/hdt.component';
   declarations: [
     AppComponent,
     MontageComponent,
-    HdtComponent
+    HdtComponent,
+    MontageIdComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [DataService, DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

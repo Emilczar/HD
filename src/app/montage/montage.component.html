@@ -3,48 +3,69 @@
 <div>
 
   <div class="ramka">
-    <!-- Linia ML1 -->
-    <div class="ML1">
-      <div *ngFor="let a of ML1 ; let i = index ">
-        <div class="hd1" data-toggle="tooltip" data-html="true"[title]="tooltip_title(a.name,a.takt,a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()">{{a.name}} </div>
-      </div>
 
-
-    </div>
-    <!-- Linia ML2-->
-    <div class="ML2">
-      <div *ngFor="let a of ML2; let i = index  ">
-        <div class="hd1" data-toggle="tooltip" data-html="true" [title]="tooltip_title(a.name,a.takt,a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()">{{a.name}} </div>
-      </div>
-    </div>
-    <!-- Linia ML3-->
-    <div class="ML3">
-      <div *ngFor="let a of ML3; let i = index  ">
-        <div class="hd1" data-toggle="tooltip" data-html="true" [title]="tooltip_title( a.name, a.takt, a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()" >{{a.name}}
-
+      <div class="ML">
+          <div *ngFor="let a of dataMontage ; let i = index ">
+            <div class="hd1" data-toggle="tooltip" data-html="true"[title]="tooltip_title(a.name,a.takt,a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()" [routerLink]="[i]">
+             {{a.name}}
+             </div>
+          </div>
         </div>
 
+    <!-- Linia ML1 -->
+
+   <!--  <div class="ML1">
+      <div *ngFor="let a of ML1 ; let i = index ">
+        <div class="hd1" data-toggle="tooltip" data-html="true"[title]="tooltip_title(a.name,a.takt,a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()" [routerLink]="[a.name]">
+         {{a.name}}
+         </div>
       </div>
     </div>
+     -->
+
+
+    <!-- Linia ML2-->
+
+   <!--  <div class="ML2">
+      <div *ngFor="let a of ML2; let i = index  ">
+        <div class="hd1" data-toggle="tooltip" data-html="true" [title]="tooltip_title(a.name,a.takt,a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()">{{a.name}}</div>
+      </div>
+    </div> -->
+
+    <!-- Linia ML3-->
+
+    <!-- <div class="ML3">
+      <div *ngFor="let a of ML3; let i = index  ">
+        <div class="hd1" data-toggle="tooltip" data-html="true" [title]="tooltip_title( a.name, a.takt, a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()" >{{a.name}}
+        </div>
+      </div>
+    </div> -->
+
     <!-- Linia ML4-->
-    <div class="ML4">
+
+  <!--   <div class="ML4">
       <div *ngFor="let a of ML4; let i = index  ">
         <div class="hd1"  data-toggle="tooltip" data-html="true" [title]="tooltip_title( a.name, a.takt, a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()">{{a.name}}  </div>
       </div>
-    </div>
+    </div> -->
+
     <!-- Linia ML5-->
-    <div class="ML5">
+  <!--   <div class="ML5">
       <div *ngFor="let a of ML5; let i = index  ">
         <div  class="hd1"  data-toggle="tooltip" data-html="true" [title]="tooltip_title( a.name, a.takt, a.status)" [ngStyle]="getCss(a.takt)" (mouseenter)="getTooltip()">{{a.name}} </div>
       </div>
     </div>
-
+ -->
   </div>
+
+
+
+
   <img class='montage1' [src]="imageMontage" alt="">
   </div>
 
+saaaaaaa
+<button (click)="getID()">ddddd</button>
 
-
-
-
+<router-outlet></router-outlet>
 

@@ -1,3 +1,4 @@
+import { DbService } from '../db.service';
 import {
   Component,
   OnInit
@@ -27,20 +28,28 @@ export class MontageComponent implements OnInit {
   public ML3;
   public ML4;
   public ML5;
+  dataMontage = new Array();
   db2: DataService;
 
   imageMontage = 'assets/m2.jpg';
 
 
-  constructor(public db: DataService) {}
+  constructor(public db: DataService, public baza: DbService) {
 
+  }
 
   ngOnInit() {
-    this.ML1 = this.getMl1();
-    this.ML2 = this.getMl2();
-    this.ML3 = this.getMl3();
-    this.ML4 = this.getMl4();
-    this.ML5 = this.getMl5();
+    /* this.getMl1();
+    this.getMl2();
+    this.getMl3();
+    this.getMl4();
+    this.getMl5(); */
+
+// new concepcion
+    this.getML();
+    console.log('dane do sprawdzenia ', this.dataMontage );
+
+
 
     $(function () {
       $('[class="hd1"]').tooltip();
@@ -55,38 +64,55 @@ export class MontageComponent implements OnInit {
     $('[class="hd1"]').tooltip();
   }
 
-  // loading the equipment
-  getMl1() {
+
+// new concepcion
+  getML() {
+    this.db.getML().subscribe((data) => {
+      this.dataMontage.push(...data);
+      this.baza.saveDB(data);
+      console.log('this.dataMontage',  this.dataMontage);
+    });
+  }
+
+// loading the equipment
+  /* getMl1() {
     this.db.getMl1().subscribe((data) => {
-      this.ML1 = data;
+
+      this.dataMontage.push(...data);
+      this.baza.saveDB(data);
       console.log('this.ML1 ', this.ML1);
     });
   }
 
   getMl2() {
     this.db.getMl2().subscribe((data) => {
-      this.ML2 = data;
+     this.dataMontage.push(...data);
+     this.baza.saveDB(data);
       console.log('this.ML2 ', this.ML2);
     });
   }
   getMl3() {
     this.db.getMl3().subscribe((data) => {
-      this.ML3 = data;
+     this.dataMontage.push(...data);
+     this.baza.saveDB(data);
       console.log('this.ML3 ', this.ML3);
     });
   }
   getMl4() {
     this.db.getMl4().subscribe((data) => {
-      this.ML4 = data;
+     this.dataMontage.push(...data);
+     this.baza.saveDB(data);
       console.log('this.ML4 ', this.ML4);
     });
   }
   getMl5() {
     this.db.getMl5().subscribe((data) => {
-      this.ML5 = data;
+     this.dataMontage.push(...data);
+     this.baza.saveDB(data);
       console.log('this.ML5 ', this.ML5);
+      console.log('dataMontage ', this.dataMontage);
     });
-  }
+  } */
 
 
 
@@ -107,12 +133,32 @@ export class MontageComponent implements OnInit {
         };
       case '4':
         return {
-          left: '800px'
+          left: '600px'
+        };
+        case '5':
+        return {
+          left: '700px'
+        };
+        case '6':
+        return {
+          left: '900px'
+        };
+        case '7':
+        return {
+          left: '650px'
+        };
+        case '8':
+        return {
+          left: '1050px',
+          top: '63px'
         };
       default:
         console.log('brak taktu');
     }
   }
 
+  getID() {
+    console.log('getDB ', this.baza.getDB() );
+  }
 
 }
