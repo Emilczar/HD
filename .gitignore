@@ -43,3 +43,5 @@ testem.log
 .DS_Store
 Thumbs.db
 src/assets/m2.jpg
+src/assets/m1.json
+src/assets/m2.json

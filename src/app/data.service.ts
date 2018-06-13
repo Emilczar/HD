@@ -21,68 +21,35 @@ import {
 @Injectable()
 export class DataService {
 
-  public montaz;
+  private m1;
+  private ml$  = new Subject < any >();
+  private m2;
+  private m2$  = new Subject < any >();
 
-  private m;
-
- /*  public ml1$ = new Subject < any > ();
-  public ml2$ = new Subject < any > ();
-  public ml3$ = new Subject < any > ();
-  public ml4$ = new Subject < any > ();
-  public ml5$ = new Subject < any > (); */
-  public ml$  = new Subject < any > ();
 
   constructor(public http: HttpClient)  {
-    this.getDane().subscribe((data) => {
-
-/*       this.montaz = data['ML'];
-      this.ml1$.next(this.makeObjektToArry(this.montaz[0]));
-      this.ml2$.next(this.makeObjektToArry(this.montaz[1]));
-      this.ml3$.next(this.makeObjektToArry(this.montaz[2]));
-      this.ml4$.next(this.makeObjektToArry(this.montaz[3]));
-      this.ml5$.next(this.makeObjektToArry(this.montaz[4])); */
-
-      // new concepcion
-      this.m = data['M'];
-      this.ml$.next(this.m);
-
+    this.getDaneM1().subscribe((data) => {
+    this.m1 = data['M1'];
+      this.ml$.next(this.m1);
     });
+    this.getDaneM2().subscribe((data) => {
+      this.m2 = data['M2'];
+      this.m2$.next(this.m2);
+      });
+
+  }
+  getDaneM1() {
+    return this.http.get('assets/m1.json');
   }
 
-  getDane() {
-    return this.http.get('assets/config.json');
+  getDaneM2() {
+    return this.http.get('assets/m2.json');
   }
-
- /*  makeObjektToArry(obj: Object) {
-    let element;
-    for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        element = obj[key];
-      }
-    }
-    console.log('element ', element);
-    return element;
-  } */
-
-  /* getMl1(): Observable < any > {
-    return this.ml1$.asObservable();
-  }
-  getMl2(): Observable < any > {
-    return this.ml2$.asObservable();
-  }
-  getMl3(): Observable < any > {
-    return this.ml3$.asObservable();
-  }
-  getMl4(): Observable < any > {
-    return this.ml4$.asObservable();
-  }
-  getMl5(): Observable < any > {
-    return this.ml5$.asObservable();
-  }
-
-  */
- getML(): Observable < any > {
+ getM1(): Observable < any > {
   return this.ml$.asObservable();
+ }
+ getM2(): Observable < any > {
+  return this.m2$.asObservable();
  }
 
 }

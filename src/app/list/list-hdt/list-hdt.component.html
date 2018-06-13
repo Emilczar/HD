@@ -1,0 +1,33 @@
+<div class="container listHDT" >
+
+  <input class="form-control search" type="text"  [(ngModel)]="userFilter.name" placeholder="Search..">
+
+  <table id="myList" class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th class="colWidth" scope="col">Obszar</th>
+        <th class="colWidth"  scope="col">Status</th>
+        <th class="colWidth"  scope="col">HDT</th>
+        <th class="colWidth"  scope="col">Takt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hdt of listHDT | filterBy: userFilter; let i = index " [routerLink]="[i]" >
+        <td class="colWidth" >{{hdt?.obszar}}</td>
+        <td class="colWidth" >{{hdt?.status}}</td>
+        <td class="colWidth" >{{hdt?.name}}</td>
+        <td class="colWidth" >{{hdt?.takt}}</td>
+
+        </tr>
+        <tr *ngIf="(listHDT | filterBy: userFilter).length === 0">
+          <td class="colWidthMax">
+          NIE MA TAKIEGO HDT !!!
+          </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+</div>

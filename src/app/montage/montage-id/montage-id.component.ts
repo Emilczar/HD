@@ -1,6 +1,15 @@
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  ActivatedRoute,
+  Params
+} from '@angular/router';
+import {
+  DbService
+} from '../../db.service';
 
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-montage-id',
@@ -8,13 +17,13 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./montage-id.component.scss']
 })
 export class MontageIdComponent implements OnInit {
-testID;
-  constructor(private route: ActivatedRoute) { }
+
+  data = new Array<any>();
+  constructor(private route: ActivatedRoute, private db: DbService) {}
 
   ngOnInit() {
-
     this.route.paramMap.subscribe((param: Params) => {
-     this.testID = param.get('id');
+      this.data = this.db.getM1id(param.get('id'));
 
     });
   }

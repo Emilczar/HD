@@ -1,0 +1,13 @@
+<div>
+  <div class="ramka">
+    <div class="ML">
+      <div *ngFor="let a of dataMontage ; let i = index ">
+        <div class="hd1" data-toggle="tooltip" data-html="true" [title]="tooltip_title(a.name,a.takt ,a.status)" [ngStyle]="getCss(a.takt)"
+          (mouseenter)="getTooltip('hd1')" [routerLink]="[i]">
+          {{a.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class='montage1' [src]="imageMontage" alt="">
+</div>

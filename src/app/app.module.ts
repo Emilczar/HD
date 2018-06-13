@@ -13,6 +13,14 @@ import { AppRoutingModule } from './/app-routing.module';
 import { MontageComponent } from './montage/montage.component';
 import { HdtComponent } from './hdt/hdt.component';
 import { MontageIdComponent } from './montage/montage-id/montage-id.component';
+import { MontageListComponent } from './montage/montage-list/montage-list.component';
+import { ShowService } from './service/show.service';
+import { ListComponent } from './list/list.component';
+
+import { ListHdtComponent } from './list/list-hdt/list-hdt.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FormsModule } from '@angular/forms';
+import { DeviceIdComponent } from './device-id/device-id.component';
 
 
 
@@ -25,14 +33,20 @@ import { MontageIdComponent } from './montage/montage-id/montage-id.component';
     AppComponent,
     MontageComponent,
     HdtComponent,
-    MontageIdComponent
+    MontageIdComponent,
+    MontageListComponent,
+    ListComponent,
+    ListHdtComponent,
+    DeviceIdComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FilterPipeModule,
+    FormsModule
   ],
-  providers: [DataService, DbService],
+  providers: [DataService, DbService, ShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
